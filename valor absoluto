@@ -1,0 +1,17 @@
+// pro.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main ()
+{
+int number;
+cout<<"Ingrese numero:";
+cin>>number;
+if(number >=0)
+cout<< "El valor absoluto es: "<<number;
+else
+cout<< "El valor absuluto es: "<< -1*number;
+getch();
+}
