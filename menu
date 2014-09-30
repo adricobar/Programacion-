@@ -1,0 +1,114 @@
+// menu.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "stdlib.h"
+#include "math.h"
+using namespace std;
+
+void main ()
+{int opcion,n;
+ float a,k,l,m,b,h,A,D,k1,k2,kR,ki,K;
+ do{
+	 cout<<"\t MENU \n\n";
+	 cout<<"1. par \n";
+	 cout<<"2. impar \n";
+	 cout<<"3. ecuacion cuadratica \n";
+	 cout<<"4. valor absoluto \n";
+	 cout<<"5. area \n";
+	 cout<<"0. Salir \n";
+	 cout<<"Escoja una opcion: ";
+	 cin>>opcion;
+ switch (opcion)
+ {case 1: cout<<"par\n";
+          cout<<"ingrese numero: ";
+          cin>>n;
+		   if (n%2==0)
+		   {
+			 cout<<"es par";
+		   }
+		   else
+		     cout<<"error";
+		   getch ();
+		   break;
+  case 2: cout<<"impar\n";
+          cout<<"ingrese numero: ";
+          cin>>n;
+		   if(n%2!=0)
+		   {
+			 cout<<"es impar";
+		   }
+		   else
+		     cout<<"error";
+		   getch ();
+		   break;
+  case 3: cout<<"ecuacion cuadratica\n";
+/*          cout<<"ingrese a: \n";
+		  cin>>k;
+		  cout<<"ingrese b: \n";
+		  cin>>l;
+		  cout<<"ingrese c; \n";
+		  cin>>m;
+		   if (a==0)
+		   {
+			 cout<<"Error";
+		   }
+		   else
+		     D=l*l-4*k*m;
+			  if (D>0)
+			  {
+				  k1=(-l+(sqrt(D))/2*k);
+				  k2=(-k-(sqrt(D))/2*k);
+				  cout<<"k1= ",k1;
+				  cout<<"k2= ",k2;
+			  }
+			  else
+			  {
+			   if(D<0)
+			   {
+				   kR=-k/(2*k);
+				   ki=sqrt(-k*(k-4*l*m));
+				   cout<<"k1= ",kR,"+",ki,"i";
+			   }
+			   else
+			   {
+				   K=-k/(2*k);
+				   cout<<"k= ",K;
+			   }
+			  }
+          }
+		   getch ();
+*/		   break;
+
+  case 4: cout<<"valor absoluto\n";
+          cout<<"ingrese numero: ";
+          cin>>n;
+		   if (n<0)
+		   {
+			 n=n*-1;
+		   }
+		    cout<<"El valor absoluto es: ";
+		    cout<<n;
+		   getch ();
+		   break;
+  case 5: cout<<"area\n";
+	      cout<<"ingrese base: ";
+          cin>>b;
+		  cout<<"ingrese altura: ";
+		  cin>>h;
+		   A=(b*h)/2;
+		   cout<<"el area es: ";
+		   cout<<A;
+		   getch ();
+		   break;
+  case 0: cout<<"Salir\n";
+          break;
+  default: cout<<"Error\n";
+	  system("cls");
+ }}
+ while (opcion !=0);
+ getch ();
+}
+  
