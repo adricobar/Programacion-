@@ -1,0 +1,30 @@
+// conversiones.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "math.h"
+
+using namespace std;
+void main ()
+
+{int numero,residuo,base,suma=0;
+float e=0;
+  cout<<"Ingrese numero: ";
+  cin>>numero;
+  cout<<"ingrese la base a la cual quiere convertir: ";
+  cin>>base;
+while (numero!=0)
+  {
+    residuo=numero%base;
+	numero=numero/base;
+	suma=suma+residuo*pow(10,e);
+	e++;
+  }
+   cout<<"Numero convertido: "<<suma;
+   getch ();
+}
+
+	
+
