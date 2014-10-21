@@ -1,0 +1,31 @@
+// series.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main ()
+{float i,s,n,signo,p,x;
+cout<<"Ingrese hasta que numero desea sumar: ";
+cin>>n;
+cout<<"Ingrese numerador: ";
+cin>>x;
+  s=0;
+  i=1;
+  signo=0;
+  p=1;
+ for (i=1;i<=n;i++)
+  {
+   s=s+pow(x,i)/p;
+   s=s+5;
+   s=s*pow(-1,signo);
+   signo++;
+   p++;
+  }
+ cout<<"La sumatoria es: "<<s;
+getch ();
+}
