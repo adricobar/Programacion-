@@ -1,0 +1,26 @@
+// salarios.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+float calcular_salarioN(float salario, float porcafp, float porciva);
+void main ()
+{
+float salarioN,salarioB,porcafp,porciva;
+	cout<<"Ingrese salario bruto";
+	cin>>salarioB;
+	porcafp=0.12;
+	porciva=0.13;
+	salarioN=calcular_salarioN(salarioB,porcafp,porciva);
+	cout<<"El salario neto es: "<<salarioN;
+	getch();
+}
+float calcular_salarioN (float salario, float porcafp, float porciva)
+{
+float salarioN;
+salarioN=salario-((porcafp+porciva)*salario);
+return salarioN;
+}
